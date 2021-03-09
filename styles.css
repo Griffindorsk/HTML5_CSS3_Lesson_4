@@ -1,0 +1,345 @@
+/* normalize part (начало) */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+b, strong {
+    font-weight: bolder;
+}
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+    sub {
+        bottom: -0.25em;
+    }
+    sup {
+        top: -0.5em;
+    }
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+ul {
+    list-style-position: inside;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+/* normalize part (конец) */
+
+.top, .bottom, .menu_top {
+    max-width: 1260px;
+    min-width: 360px;
+    width: 97vw;
+    margin: 0 auto;
+    display: flex;
+    /* background-color: antiquewhite;   */
+}
+
+.top {
+    flex-direction: column;
+    background-image: url('images/night_sky.jpg');
+}
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    height: 80px;
+}
+.smail {
+    height: 80px;
+}
+.menu_icon {
+    height: 3rem;
+    fill: white;
+}
+.logo label {
+    margin-left: auto;
+    display: none;
+}
+.top input {
+    display: none;
+}
+.menu_top, .menu_top_vert {
+    width: 100%;
+    background-color: #879fc5;
+}
+
+.menu_top p {
+    margin: 0;
+    padding: 0;
+}
+
+.menu_top a {
+    display: block;
+    line-height: 2.4rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #112040;
+    padding: 0 1rem;
+    margin-right: 1rem;
+}
+
+.menu_top_vert {
+    flex-direction: column;
+    max-height: 0;
+    transform-origin: top;
+    transform: scaleY(0);
+    max-width: 180px;
+    overflow: hidden;
+    position: absolute;
+    top: 80px;
+    right: 3vw;
+}
+#check_menu:checked ~ .menu_top_vert {
+    max-height: none;
+
+    transform: scaleY(100%);
+    transition: all 0.5s;
+}
+
+.menu_top_vert p {
+    margin: 0;
+    padding-left: 1rem;
+}
+.menu_top_vert a {
+    display: block;
+    line-height: 1.4rem;
+    /* padding: 0.2rem auto 0.2rem 1rem; */
+    margin: 0 0 0.2rem 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #112040;
+}
+.menu_top_vert a:last-of-type {
+    margin: 0;
+}
+.menu_top a:hover, .menu_top_vert a:hover {
+    background-color: #091f50;
+    color: #d2daeb;
+}
+/* .menu_top a:hover, .menu_top_vert a:hover {
+    background-color: #091f50;
+    color: #d2daeb;
+    padding: 0 1rem;
+    margin-right: 1rem;
+} */
+
+.menu_top a:last-of-type {
+    margin-right: 0;
+}
+
+.bottom {
+    background-color: #676477;
+    color: white;
+}
+
+.reserved {
+    padding: 0 1rem;
+}
+
+/* форма обратной связи (начало) */
+.temp_form, .contacts {
+    margin: 0 10px 10px 0;
+    padding: 10px 10px 5px 10px;
+    width: 100%;
+    max-width: 320px;
+    min-width: 240px;
+    background: cornsilk;
+    box-shadow: 2px 2px 12px #515e5a;
+}
+.temp_form p {
+    font-size: 1.6rem;
+}
+.column_I input, .column_II input {
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    width: 240px;
+    border: none;
+    background-color: rgb(230, 255, 255);
+    caret-color: rgb(255, 0, 0);
+    /* font-size: 0.8rem;
+    line-height: 1.4rem; */
+}
+.column_I input::placeholder, .column_II input::placeholder {
+    font-size: 0.6rem;
+}
+
+.column_I input button, .column_II input button {
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+    padding: 5px 10px;
+    margin: 10px 0 0 0;
+    border: none;
+    border-radius: 4px;
+}
+
+.temp_form h3 {
+    font-size: 0.8rem;
+    padding-bottom: 5px;
+}
+.column_I input fieldset, .column_II input fieldset {
+    border: none;
+    padding: 5px 0;
+    font-size: 0.8rem;
+}
+.column_I input label, .column_II input label {
+    padding-bottom: 10px;
+}
+fieldset {
+    border: none;
+}
+.radio_set input {
+    width: auto;
+    margin: 0 10px;
+}
+.radio_set p {
+    font-size: 0.8rem;
+    line-height: 1.6rem;
+    /* background-color: cadetblue; */
+}
+/* форма обратной связи (конец) */
+
+@media (min-width: 732px) and (max-width: 1259px) {
+    .top, .bottom, .menu_top {
+        width: 96vw;
+    }
+}
+
+@media (max-width: 731px) {
+    .top, .bottom, .menu_top {
+    width: 95vw;
+    } 
+    .logo label {
+    display: unset;
+    }
+    .menu_top {
+        display: none;
+    }
+}
+
+/* оформление мультиколоночного блока (начало) */
+.multicolumns {
+    display: flex;
+    width: 97vw;
+    margin: 0 auto 1rem auto;
+    background-color: #f9fbfc;
+    font-family: sans-serif;
+}
+.multicolumns p {
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+    margin: 0;
+    color: rgb(1, 62, 80);
+    text-align: justify;
+}
+.multicolumns h3 {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    margin: 0.3rem auto;
+    color: rgb(2, 49, 63);
+}
+.multicolumns h4 {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    margin: 0.2rem auto;
+    color: rgb(2, 49, 63);
+}
+.column_I, .column_II, .column_III {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 420px;
+    padding: 0 1vw;
+    margin-bottom: 5px;
+    background-color: #f1f7f8;
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+}
+.column_II {
+    margin: 0 1vw;
+}
+.column_sub_block img {
+margin: 0 1vw 1vh 0;
+}
+.column_sub_block_video {
+    position: relative;
+    background-color: none;
+    /* z-index: 2; */
+}
+.background_video {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+/* .front_text {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+} */
+
+.column_wide {
+    width: 100%;
+    padding: 0 1vw;
+    background-color: #f1f7f8;
+}
+
+.pic_small, .video_small {
+    width: 240px;
+    float: left;
+}
+
+
+.pic_wide {
+    width: 50%;
+    float: left;
+}
+
+@media (min-width: 732px) and (max-width: 1259px) {
+    .multicolumns {
+        width: 96vw;
+    }
+
+    .pic_small, .pic_wide, .video_small {
+        width: unset;
+        max-width: 100%;
+        float: none;
+    }
+}
+
+@media (max-width: 731px) {
+    .multicolumns {
+    width: 95vw;
+    flex-direction: column;
+    align-items: center;
+    }
+    .column_wide {
+        max-width: 420px;
+    }
+    .column_II {
+    margin: 0;
+}
+    .column_sub_block img {
+        margin: 0 0 1vh 0;
+}
+    .pic_small, .pic_wide, .video_small {
+    width: unset;
+    max-width: 100%;
+    float: none;
+    }   
+}
+/* оформление мультиколоночного блока (конец) */
