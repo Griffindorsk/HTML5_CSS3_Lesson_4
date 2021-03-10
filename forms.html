@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шаблон формы</title>
+    <link rel="stylesheet" href="forms.css">
+</head>
+
+<body>
+    <form class="temp_form" action="#">
+        <!-- в качестве заголовков полей вместо fielset можно использовать span или h1/2/3/..
+        использовать <p> и <br> не рекомендуется внутри формы -->
+        <fieldset>
+            <legend>Personal data</legend>
+            <div>
+                <label class="temp_label_inline" for="temp_name">Name</label>
+                <input id="temp_name" type="text" placeholder="Your name">
+            </div>
+
+            <legend>Your birth date</legend>
+            <div>
+                <label class="temp_label_inline" for="temp_date_1">Birthdate</label>
+                <input id="temp_date_1" type="date">
+            </div>
+
+            <legend>Your family</legend>
+            <div>
+                <label class="temp_label_inline" for="temp_number_1">Children's number</label>
+                <input id="temp_number_1" type="number" min="0" max="12">
+            </div>
+
+            <legend>Your feelings</legend>
+            <div>
+                <label class="temp_label_inline" for="temp_color">Цвет вашего настроения</label>
+                <input id="temp_color" type="color">
+            </div>
+            <legend>Узнать про мишку</legend>
+            <div>
+                <label for="temp_image">Нравится мишка?</label>
+                <input id="temp_image" type="image" src="images/koala.jpg">
+            </div>
+            <legend>Your feedback</legend>
+            <div>
+                <label class="temp_label_inline" for="temp_range_1">Ваша оценка</label>
+                <input id="temp_range_1" type="range" value="5" min="1" max="5" step="0.5">
+            </div>
+
+            <legend>Как вы себя чувствуете от 0 до 1</legend>
+            <div>
+                <label class="temp_label_inline" for="temp_progress">Настроение</label>
+                <progress value="0.7"></progress>
+            </div>
+            <legend>Сколько шагов прошли</legend>
+            <div>
+                <label class="temp_label_inline" for="temp_meter">Шагомер</label>
+                <meter min="100" max="30000" value="5000"></meter>
+            </div>
+
+            <legend>Your Phone</legend>
+            <div>
+                <label class="temp_label_inline" for="temp_tel">Tel.</label>
+                <input id="temp_tel" type="tel" placeholder="+1 234 567-89-90">
+            </div>
+
+            <legend>Your E-mail</legend>
+            <div>
+                <label class="temp_label_inline" for="temp_email">E-mail</label>
+                <input id="temp_email" type="email" placeholder="Your e-mail">
+            </div>
+
+            <legend>Your web-page</legend>
+            <div>
+                <label class="temp_label_inline" for="temp_www">Web-page</label>
+                <input id="temp_www" type="url" placeholder="www.mysite.com">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Your password</legend>
+            <div>
+                <label class="temp_label_inline" for="temp_pass">Password</label>
+                <input id="temp_pass" type="password" placeholder="your password here">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Your profession</legend>
+            <div>
+                <label class="temp_label_inline" for="temp_text_advised">Your profession</label>
+                <input id="temp_text_advised" type="text" list="temp_advices">
+                <datalist id="temp_advices">
+                    <option>Литейщик</option>
+                    <option>Кузнец</option>
+                    <option>Молотобоец</option>
+                    <option>Землепашец</option>
+                    <option>Менеджер</option>
+                </datalist>
+            </div>
+        </fieldset>
+        <!-- <div>
+                    <label for="temp_text_advised">Your profession</label>
+                    <input id="temp_text_advised" type="text" list="temp_advices">
+                    <datalist id="temp_advices">
+                        <select>
+                            <option value="temp_advice_first">Литейщик</option>
+                            <option value="temp_advice_second">Кузнец</option>
+                            <option value="temp_advice_third">Молотобоец</option>
+                            <option value="temp_advice_forth">Землепашец</option>
+                            <option value="temp_advice_fifth">Менеджер</option>
+                        </select>
+                    </datalist>
+                </div> -->
+
+        <fieldset>
+            <legend>Your options</legend>
+            <div>
+                <label class="temp_label_inline" for="temp_options">Your Selection</label>
+                <select name="temp_select" id="temp_options">
+                    <option value="temp_option_first">First option</option>
+                    <option value="temp_option_second">Second option</option>
+                    <option value="temp_option_third">Third option</option>
+                    <option value="temp_option_fourth">Forth option</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Feedback</legend>
+            <div>
+                <label for="temp_message">Your message</label>
+                <textarea name="temp_text_area" id="temp_message" cols="30" rows="10"
+                    placeholder="Your message here"></textarea>
+            </div>
+        </fieldset>
+
+
+
+        <fieldset>
+            <legend>Your choices</legend>
+            <div class="temp_radio_block">
+                <div>
+                    <label for="temp_radio_first">one choice</label>
+                    <input id="temp_radio_first" type="radio" name="temp_radio">
+                </div>
+                <div>
+                    <label for="temp_radio_second">another choice</label>
+                    <input id="temp_radio_second" type="radio" name="temp_radio" checked>
+                </div>
+                <div>
+                    <label for="temp_radio_third">third choice</label>
+                    <input id="temp_radio_third" type="radio" name="temp_radio">
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Finalization</legend>
+            <div>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>
