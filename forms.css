@@ -1,6 +1,10 @@
 .temp_form {
     background-color: none;
 }
+.networks {
+    display: flex;
+    flex-direction: column;
+}
 .temp_form fieldset {
     border: none;
     margin-bottom: 0.5rem;
