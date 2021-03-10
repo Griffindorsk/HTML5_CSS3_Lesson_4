@@ -148,7 +148,7 @@ a {
 }
 
 /* форма обратной связи (начало) */
-.temp_form, .contacts {
+/* .temp_form, .contacts {
     margin: 0 10px 10px 0;
     padding: 10px 10px 5px 10px;
     width: 100%;
@@ -167,8 +167,6 @@ a {
     border: none;
     background-color: rgb(230, 255, 255);
     caret-color: rgb(255, 0, 0);
-    /* font-size: 0.8rem;
-    line-height: 1.4rem; */
 }
 .column_I input::placeholder, .column_II input::placeholder {
     font-size: 0.6rem;
@@ -205,8 +203,7 @@ fieldset {
 .radio_set p {
     font-size: 0.8rem;
     line-height: 1.6rem;
-    /* background-color: cadetblue; */
-}
+} */
 /* форма обратной связи (конец) */
 
 @media (min-width: 732px) and (max-width: 1259px) {
